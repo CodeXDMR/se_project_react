@@ -50,7 +50,7 @@ function App() {
 
   useEffect(() => {
     function handleClickOffModal(event) {
-      if (event.target === !event.target);
+      if (event.target === !event.currentTarget);
       console.log(event.target);
     }
 

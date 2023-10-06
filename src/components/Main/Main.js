@@ -24,7 +24,7 @@ function Main({ weatherTemp, onSelectCard }) {
   // console.log(filteredCards);
 
   return (
-    <main className="main">
+    <main>
       <WeatherStrip day={true} type="sunny" weatherTemp={weatherTemp} />
       <section className="card_section" id="card-section">
         Today is {weatherTemp} °F / You may want to wear:
