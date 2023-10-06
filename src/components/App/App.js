@@ -5,8 +5,8 @@ import Footer from "../Footer/Footer";
 import FormModal from "../FormModal/FormModal";
 import ItemModal from "../ItemModal/ItemModal";
 import { useEffect, useState } from "react";
-import { getForecastWeather } from "../../util/weatherApi";
-import { parseWeatherDataAPI } from "../../util/weatherApi";
+import { getForecastWeather } from "../../utils/weatherApi";
+import { parseWeatherDataAPI } from "../../utils/weatherApi";
 
 function App() {
   const [location, setLocation] = useState("");

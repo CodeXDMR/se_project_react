@@ -1,5 +1,5 @@
 import "./Header.css";
-import { parseWeatherDataAPI } from "../../util/weatherApi";
+import { parseWeatherDataAPI } from "../../utils/weatherApi";
 
 const Header = ({ location, onCreateModal }) => {
   console.log("Header");
