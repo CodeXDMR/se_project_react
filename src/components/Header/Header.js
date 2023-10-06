@@ -1,5 +1,5 @@
 import "./Header.css";
-import { parseWeatherDataAPI } from "../util/weatherApi";
+import { parseWeatherDataAPI } from "../../util/weatherApi";
 
 const Header = ({ location, onCreateModal }) => {
   console.log("Header");
@@ -13,7 +13,7 @@ const Header = ({ location, onCreateModal }) => {
     <header className="header">
       <div className="header__site-logo">
         <div className="header__logo">
-          <img src={require("../images/logo.svg").default} alt="Logo" />
+          <img src={require("../../images/logo.svg").default} alt="Logo" />
         </div>
         <div className="header__date-location">
           {currentDate}, {location}
@@ -31,7 +31,7 @@ const Header = ({ location, onCreateModal }) => {
         </div>
         <div>Terrence Tegegne</div>
         <div className="header__avatar">
-          <img src={require("../images/avatar.svg").default} alt="Avatar" />
+          <img src={require("../../images/avatar.svg").default} alt="Avatar" />
         </div>
       </div>
     </header>
