@@ -24,6 +24,7 @@
   height: 328px;
   border-radius: 19px;
   border: 1px solid rgb(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 .card_name {

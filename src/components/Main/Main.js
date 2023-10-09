@@ -1,10 +1,9 @@
 import WeatherStrip from "../WeatherStrip/WeatherStrip";
 import ItemCard from "../ItemCard/ItemCard";
 import { defaultClothingItems } from "../../utils/constants";
-import { useMemo } from "react";
 
 function Main({ weatherTemp, onSelectCard }) {
-  const weatherType = useMemo(() => {
+  const getWeatherType = () => {
     if (weatherTemp >= 86) {
       return "hot";
     } else if (weatherTemp >= 66 && weatherTemp <= 85) {
@@ -12,16 +11,12 @@ function Main({ weatherTemp, onSelectCard }) {
     } else if (weatherTemp <= 65) {
       return "cold";
     }
-  }, [weatherTemp]);
-
-  // console.log(weatherType);
+  };
+  const weatherType = getWeatherType();
 
   const filteredCards = defaultClothingItems.filter((item) => {
-    // console.log(item);
     return item.weather.toLowerCase() === weatherType;
   });
-
-  // console.log(filteredCards);
 
   return (
     <main>
@@ -30,7 +25,7 @@ function Main({ weatherTemp, onSelectCard }) {
         Today is {weatherTemp} °F / You may want to wear:
         <div className="card_items">
           {filteredCards.map((item) => (
-            <ItemCard item={item} onSelectCard={onSelectCard} />
+            <ItemCard key={item._id} item={item} onSelectCard={onSelectCard} />
           ))}
         </div>
       </section>

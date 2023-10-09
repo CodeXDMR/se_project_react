@@ -2,7 +2,6 @@ import "./Header.css";
 import { parseWeatherDataAPI } from "../../utils/weatherApi";
 
 const Header = ({ location, onCreateModal }) => {
-  console.log("Header");
   if (!parseWeatherDataAPI) return null;
   const currentDate = new Date().toLocaleString("default", {
     month: "long",

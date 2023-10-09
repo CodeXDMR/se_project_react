@@ -1,4 +1,8 @@
-export const defaultClothingItems = [
+const latitude = 34.05;
+const longitude = -118.24;
+const APIkey = "2a00f5785e3550aa9c0ae2f553f31208";
+
+const defaultClothingItems = [
   {
     _id: 0,
     name: "Cap",
@@ -36,3 +40,64 @@ export const defaultClothingItems = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Coat.png?etag=298717ed89d5e40b1954a1831ae0bdd4",
   },
 ];
+
+const weatherOptions = [
+  {
+    url: require("../images/day/sunny.svg").default,
+    day: true,
+    type: "sunny",
+  },
+  {
+    url: require("../images/day/cloudy.svg").default,
+    day: true,
+    type: "cloudy",
+  },
+  {
+    url: require("../images/day/rain.svg").default,
+    day: true,
+    type: "rain",
+  },
+  {
+    url: require("../images/day/sunny.svg").default,
+    day: true,
+    type: "storm",
+  },
+  {
+    url: require("../images/day/snow.svg").default,
+    day: true,
+    type: "snow",
+  },
+  { url: require("../images/day/fog.svg").default, day: true, type: "fog" },
+  {
+    url: require("../images/night/clear.svg").default,
+    day: false,
+    type: "clear",
+  },
+  {
+    url: require("../images/night/cloudy.svg").default,
+    day: false,
+    type: "cloudy",
+  },
+  {
+    url: require("../images/night/rain.svg").default,
+    day: false,
+    type: "rain",
+  },
+  {
+    url: require("../images/night/storm.svg").default,
+    day: false,
+    type: "storm",
+  },
+  {
+    url: require("../images/night/snow.svg").default,
+    day: false,
+    type: "snow",
+  },
+  {
+    url: require("../images/night/fog.svg").default,
+    day: false,
+    type: "fog",
+  },
+];
+
+export { defaultClothingItems, weatherOptions, latitude, longitude, APIkey };
