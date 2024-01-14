@@ -5,7 +5,7 @@ const ItemModal = ({ selectedCard, handleCloseModal, handleDeleteCard }) => {
   const printHello = (e) => {
     e.preventDefault();
     // handleCloseModal();
-    return console.log("Hell No!");
+    return console.log(selectedCard);
   };
   return (
     <div className="modal" id="modal">
@@ -30,7 +30,7 @@ const ItemModal = ({ selectedCard, handleCloseModal, handleDeleteCard }) => {
           <button
             className="item-modal__delete-button"
             type="button"
-            onClick={handleDeleteCard}
+            onClick={handleDeleteCard(selectedCard)}
           >
             Delete
           </button>

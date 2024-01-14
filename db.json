@@ -1,12 +1,6 @@
 {
   "items": [
     {
-      "_id": 0,
-      "name": "Beanie",
-      "weather": "cold",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Beanie.png?etag=bc10497cc80fa557f036e94f9999f7b2"
-    },
-    {
       "_id": 1,
       "name": "Boot",
       "weather": "cold",
@@ -17,12 +11,6 @@
       "name": "Cap",
       "weather": "hot",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Cap.png?etag=f3dad389b22909cafa73cff9f9a3d591"
-    },
-    {
-      "_id": 3,
-      "name": "Coat",
-      "weather": "cold",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Coat.png?etag=298717ed89d5e40b1954a1831ae0bdd4"
     },
     {
       "_id": 4,
@@ -67,12 +55,6 @@
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Scarf.png?etag=74efbee93810c926b5507e862c6cb76c"
     },
     {
-      "_id": 11,
-      "name": "Shorts",
-      "weather": "Hot",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Shorts.png?etag=d728c496643f610de8d8fea92dd915ba"
-    },
-    {
       "_id": 12,
       "name": "Skirt",
       "weather": "hot",
@@ -95,42 +77,6 @@
       "name": "Sweatshirt",
       "weather": "warm",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Sweatshirt.png?etag=008a9674757bea2e0bdb31242e364be0"
-    },
-    {
-      "_id": 16,
-      "name": "T-Shirt",
-      "weather": "hot",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/T-Shirt.png?etag=44ed1963c44ab19cd2f5011522c5fc09"
-    },
-    {
-      "name": "Penn State",
-      "weather": "cold",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Philadelphia_city_hall.jpg/1200px-Philadelphia_city_hall.jpg",
-      "_id": 17
-    },
-    {
-      "name": "Penn State",
-      "weather": "hot",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Philadelphia_city_hall.jpg/1200px-Philadelphia_city_hall.jpg",
-      "_id": 18
-    },
-    {
-      "name": "Penn State",
-      "weather": "hot",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Philadelphia_city_hall.jpg/1200px-Philadelphia_city_hall.jpg",
-      "_id": 19
-    },
-    {
-      "name": "Penn State",
-      "weather": "hot",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Philadelphia_city_hall.jpg/1200px-Philadelphia_city_hall.jpg",
-      "_id": 20
-    },
-    {
-      "name": "Penn State",
-      "weather": "hot",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Philadelphia_city_hall.jpg/1200px-Philadelphia_city_hall.jpg",
-      "_id": 21
     }
   ]
 }

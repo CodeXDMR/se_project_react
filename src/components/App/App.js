@@ -47,12 +47,13 @@ function App() {
   const handleSelectedCard = (card) => {
     setActiveModal("preview");
     setSelectedCard(card);
-    console.log(card._id);
+    console.log(card);
   };
 
   const handleDeleteCard = (card) => {
     deleteItemCardAPI(card._id);
-    console.log(card);
+
+    console.log(card._id);
   };
 
   const handleAddItemSubmit = (item) => {

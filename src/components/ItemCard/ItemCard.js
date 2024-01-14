@@ -1,8 +1,9 @@
 import "./ItemCard.css";
 
 const ItemCard = ({ item, onSelectCard }) => {
+  // console.log(item);
   return (
-    <div className="card">
+    <div className="card" id={item._id} alt={`${item.name} Card`}>
       <div>
         <img
           src={item.imageUrl}
