@@ -1,5 +1,7 @@
 import "./Header.css";
 import { parseWeatherDataAPI } from "../../utils/weatherApi";
+import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
+import { Link } from "react-router-dom";
 
 const Header = ({ location, onCreateModal }) => {
   if (!parseWeatherDataAPI) return null;
@@ -8,29 +10,39 @@ const Header = ({ location, onCreateModal }) => {
     day: "numeric",
   });
 
+  // console.log(currentDate);
   return (
     <header className="header">
       <div className="header__site-logo">
         <div className="header__logo">
-          <img src={require("../../images/logo.svg").default} alt="Logo" />
+          <Link to="/">
+            <img src={require("../../images/logo.svg").default} alt="Logo" />
+          </Link>
         </div>
         <div className="header__date-location">
           {currentDate}, {location}
         </div>
       </div>
       <div className="header__avatar-logo">
+        <ToggleSwitch />
         <div>
           <button
             className="header__button"
-            type="text"
+            type="button"
             onClick={onCreateModal}
           >
             + Add New Clothes
           </button>
         </div>
-        <div>Terrence Tegegne</div>
-        <div className="header__avatar">
-          <img src={require("../../images/avatar.svg").default} alt="Avatar" />
+        <Link to="/profile">
+          <div>Terrence Tegegne</div>
+        </Link>
+        <div>
+          <img
+            src={require("../../images/avatar.svg").default}
+            className="header__avatar"
+            alt="Avatar"
+          />
         </div>
       </div>
     </header>

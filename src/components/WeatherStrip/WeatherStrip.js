@@ -1,16 +1,25 @@
 import "./WeatherStrip.css";
 import { weatherOptions } from "../../utils/constants";
+import { parseWeatherDataAPI } from "../../utils/weatherApi";
+import { CurrentTemperatureUnitContext } from "../contexts/CurrentTemperatureUnitContext";
 
-const WeatherStrip = ({ day, type, weatherTemp = "" }) => {
-  const weatherOption = weatherOptions.find((option) => {
-    return option.day === day && option.type === type;
-  });
+const WeatherStrip = ({
+  type = "",
+  weatherTemp = "",
+  day = "",
+  currentTemperatureUnit = "",
+}) => {
+  const weatherOption = weatherOptions.find(
+    (option) => option.day === day && option.type === type
+  );
 
   const weatherOptionUrl = weatherOption.url || "";
 
   return (
     <section className="weather" id="weather">
-      <div className="weather__info">{weatherTemp} °F</div>
+      <div className="weather__info">
+        {weatherTemp} °{currentTemperatureUnit}
+      </div>
       <img
         src={weatherOptionUrl}
         className="weather_image"
