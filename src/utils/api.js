@@ -7,12 +7,6 @@ const handleServerResponse = (res) => {
   return Promise.reject(`Error: ${res.status}`);
 };
 
-// const getClothingItems = () => {
-//   const clothingItems = fetch(`${baseUrl}/items`).then(handleServerResponse);
-//   console.log(clothingItems);
-//   return clothingItems;
-// };
-
 const getClothingItems = () => {
   return fetch(`${baseUrl}/items`, {
     headers: { "Content-Type": "application/json" },
@@ -20,15 +14,8 @@ const getClothingItems = () => {
 };
 
 const parseClothingDataAPI = (data) => {
-  console.log(data);
   return data;
 };
-
-// const parseClothingDataAPI = (data) => {
-//   const clothingData = data;
-//   console.log(clothingData);
-//   return clothingData;
-// };
 
 const addItemCardAPI = ({ name, weather, imageUrl }) => {
   return fetch(`${baseUrl}/items`, {
@@ -42,10 +29,8 @@ const addItemCardAPI = ({ name, weather, imageUrl }) => {
   }).then(handleServerResponse);
 };
 
-// console.log(addItemCard());
-
-const deleteItemCardAPI = (id) => {
-  return fetch(`${baseUrl}/items/${id}`, {
+const deleteItemCardAPI = (_id) => {
+  return fetch(`${baseUrl}/items/${_id}`, {
     method: "DELETE",
     headers: { "Content-Type": "application/json" },
   }).then(handleServerResponse);

@@ -1,7 +1,5 @@
 import "./WeatherStrip.css";
 import { weatherOptions } from "../../utils/constants";
-import { parseWeatherDataAPI } from "../../utils/weatherApi";
-import { CurrentTemperatureUnitContext } from "../contexts/CurrentTemperatureUnitContext";
 
 const WeatherStrip = ({
   type = "",

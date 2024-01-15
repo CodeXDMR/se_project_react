@@ -2,7 +2,6 @@ import "./App.css";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import Profile from "../Profile/Profile";
-import ClothesSection from "../ClothesSection/ClothesSection";
 import Footer from "../Footer/Footer";
 import ItemModal from "../ItemModal/ItemModal";
 import { useEffect, useState } from "react";
@@ -29,8 +28,6 @@ function App() {
   const [clothingItems, setClothingItems] = useState([]);
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
 
-  // console.log(temp);
-
   const handleCreateModal = () => {
     setActiveModal("create");
   };
@@ -47,32 +44,30 @@ function App() {
   const handleSelectedCard = (card) => {
     setActiveModal("preview");
     setSelectedCard(card);
-    console.log(card);
   };
 
   const handleDeleteCard = (card) => {
-    deleteItemCardAPI(card._id);
-
-    console.log(card._id);
+    deleteItemCardAPI(card._id)
+      .then(() => {
+        setClothingItems((cards) => cards.filter((c) => c._id !== card._id));
+      })
+      .catch((err) => {
+        alert("Unexpected error, please try again.");
+        console.error("There was an error -", err);
+      });
+    handleCloseModal();
   };
 
   const handleAddItemSubmit = (item) => {
     setClothingItems([item, ...clothingItems]);
     addItemCardAPI(item);
-    console.log(item);
+    handleCloseModal();
   };
-
-  // const onAddItem = (values) => {
-  //   handleAddItemSubmit(values);
-  //   console.log(values);
-  // };
 
   useEffect(() => {
     getClothingItems()
       .then((data) => {
         const clothing = parseClothingDataAPI(data);
-        console.log(clothing);
-
         setClothingItems(clothing);
       })
       .catch((err) => {
@@ -84,7 +79,6 @@ function App() {
   useEffect(() => {
     getForecastWeather()
       .then((data) => {
-        // console.log(data);
         const location = data.name;
         const temperature = parseWeatherDataAPI(data);
         const day = timeOfDayAPI(data);

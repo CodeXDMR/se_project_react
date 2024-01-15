@@ -2,11 +2,6 @@ import "./ItemModal.css";
 import "../../block/modal.css";
 
 const ItemModal = ({ selectedCard, handleCloseModal, handleDeleteCard }) => {
-  const printHello = (e) => {
-    e.preventDefault();
-    // handleCloseModal();
-    return console.log(selectedCard);
-  };
   return (
     <div className="modal" id="modal">
       <div className="item-modal__content">
@@ -30,7 +25,7 @@ const ItemModal = ({ selectedCard, handleCloseModal, handleDeleteCard }) => {
           <button
             className="item-modal__delete-button"
             type="button"
-            onClick={handleDeleteCard(selectedCard)}
+            onClick={() => handleDeleteCard(selectedCard)}
           >
             Delete
           </button>

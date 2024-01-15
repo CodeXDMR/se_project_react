@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 
 const Header = ({ location, onCreateModal }) => {
   if (!parseWeatherDataAPI) return null;
+
   const currentDate = new Date().toLocaleString("default", {
     month: "long",
     day: "numeric",
   });
 
-  // console.log(currentDate);
   return (
     <header className="header">
       <div className="header__site-logo">
