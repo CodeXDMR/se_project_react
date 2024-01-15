@@ -1,16 +1,11 @@
-const baseUrl = "http://localhost:3001";
+import processServerResponse from "./processServerResponse";
 
-const handleServerResponse = (res) => {
-  if (res.ok) {
-    return res.json();
-  }
-  return Promise.reject(`Error: ${res.status}`);
-};
+const baseUrl = "http://localhost:3001";
 
 const getClothingItems = () => {
   return fetch(`${baseUrl}/items`, {
     headers: { "Content-Type": "application/json" },
-  }).then(handleServerResponse);
+  }).then(processServerResponse);
 };
 
 const parseClothingDataAPI = (data) => {
@@ -26,14 +21,14 @@ const addItemCardAPI = ({ name, weather, imageUrl }) => {
       weather,
       imageUrl,
     }),
-  }).then(handleServerResponse);
+  }).then(processServerResponse);
 };
 
 const deleteItemCardAPI = (_id) => {
   return fetch(`${baseUrl}/items/${_id}`, {
     method: "DELETE",
     headers: { "Content-Type": "application/json" },
-  }).then(handleServerResponse);
+  }).then(processServerResponse);
 };
 
 export {

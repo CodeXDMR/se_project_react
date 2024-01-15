@@ -1,11 +1,12 @@
 import "./SideBar.css";
+import avatarImage from "../../images/avatar.svg";
 
 const SideBar = () => {
   return (
     <main>
       <div className="sidebar">
         <img
-          src={require("../../images/avatar.svg").default}
+          src={avatarImage}
           className="sidebar__avatar"
           alt="Profile Avatar"
         />

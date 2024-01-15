@@ -37,8 +37,8 @@ function App() {
   };
 
   const handleToggleSwitchChange = () => {
-    if (currentTemperatureUnit === "F") setCurrentTemperatureUnit("C");
-    if (currentTemperatureUnit === "C") setCurrentTemperatureUnit("F");
+    setCurrentTemperatureUnit(currentTemperatureUnit === "F" ? "C" : "F");
+    setCurrentTemperatureUnit(currentTemperatureUnit === "C" ? "F" : "C");
   };
 
   const handleSelectedCard = (card) => {
@@ -49,19 +49,29 @@ function App() {
   const handleDeleteCard = (card) => {
     deleteItemCardAPI(card._id)
       .then(() => {
-        setClothingItems((cards) => cards.filter((c) => c._id !== card._id));
+        setClothingItems((cards) =>
+          cards.filter((item) => item._id !== card._id)
+        );
+      })
+      .then(() => {
+        handleCloseModal();
       })
       .catch((err) => {
         alert("Unexpected error, please try again.");
         console.error("There was an error -", err);
       });
-    handleCloseModal();
   };
 
   const handleAddItemSubmit = (item) => {
-    setClothingItems([item, ...clothingItems]);
-    addItemCardAPI(item);
-    handleCloseModal();
+    addItemCardAPI(item)
+      .then((newItem) => {
+        setClothingItems([newItem, ...clothingItems]);
+        handleCloseModal();
+      })
+      .catch((err) => {
+        alert("Unexpected error, please try again.");
+        console.error("There was an error -", err);
+      });
   };
 
   useEffect(() => {

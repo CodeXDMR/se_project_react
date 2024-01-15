@@ -1,4 +1,6 @@
 import "./Header.css";
+import avatarImage from "../../images/avatar.svg";
+import logo from "../../images/logo.svg";
 import { parseWeatherDataAPI } from "../../utils/weatherApi";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import { Link } from "react-router-dom";
@@ -16,7 +18,7 @@ const Header = ({ location, onCreateModal }) => {
       <div className="header__site-logo">
         <div className="header__logo">
           <Link to="/">
-            <img src={require("../../images/logo.svg").default} alt="Logo" />
+            <img src={logo} alt="Logo" />
           </Link>
         </div>
         <div className="header__date-location">
@@ -38,11 +40,7 @@ const Header = ({ location, onCreateModal }) => {
           <div>Terrence Tegegne</div>
         </Link>
         <div>
-          <img
-            src={require("../../images/avatar.svg").default}
-            className="header__avatar"
-            alt="Avatar"
-          />
+          <img src={avatarImage} className="header__avatar" alt="Avatar" />
         </div>
       </div>
     </header>
