@@ -1,7 +1,7 @@
 import ItemCard from "../ItemCard/ItemCard";
 import { defaultClothingItems } from "../../utils/constants";
 import { useContext } from "react";
-import { CurrentTemperatureUnitContext } from "../contexts/CurrentTemperatureUnitContext";
+import { CurrentTemperatureUnitContext } from "../../contexts/CurrentTemperatureUnitContext";
 import WeatherStrip from "../WeatherStrip/WeatherStrip";
 
 function Main({ weatherTemp, onSelectCard, day, type, clothing }) {
