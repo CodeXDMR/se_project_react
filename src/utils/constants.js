@@ -67,7 +67,21 @@ const weatherOptions = [
     day: true,
     type: "snow",
   },
-  { url: require("../images/day/fog.svg").default, day: true, type: "fog" },
+  {
+    url: require("../images/day/fog.svg").default,
+    day: true,
+    type: "fog",
+  },
+  {
+    url: require("../images/day/haze.svg").default,
+    day: true,
+    type: "haze",
+  },
+  {
+    url: require("../images/day/haze.svg").default,
+    day: true,
+    type: "mist",
+  },
   {
     url: require("../images/night/clear.svg").default,
     day: false,
@@ -97,6 +111,16 @@ const weatherOptions = [
     url: require("../images/night/fog.svg").default,
     day: false,
     type: "fog",
+  },
+  {
+    url: require("../images/night/haze.svg").default,
+    day: true,
+    type: "haze",
+  },
+  {
+    url: require("../images/night/haze.svg").default,
+    day: true,
+    type: "mist",
   },
 ];
 

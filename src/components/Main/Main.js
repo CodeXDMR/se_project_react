@@ -35,9 +35,20 @@ function Main({ weatherTemp, onSelectCard, day, type, clothing }) {
       ? getTemperatureTypeF()
       : getTemperatureTypeC();
 
+  console.log(weatherType);
+
   const filteredCards = clothing.filter((item) => {
+    console.log(weatherType);
     return item.weather.toLowerCase() === weatherType;
   });
+
+  // const weatherType = () => {
+  //   if (currentTemperatureUnit === "F") return getTemperatureTypeF();
+  //   if (currentTemperatureUnit === "C") return getTemperatureTypeC();
+  // };
+  // const filteredCards = clothing.filter((item) => {
+  //   return item.weather.toLowerCase() === weatherType();
+  // });
 
   return (
     <main>
@@ -51,7 +62,6 @@ function Main({ weatherTemp, onSelectCard, day, type, clothing }) {
         Today is {temp} °{currentTemperatureUnit} / You may want to wear:
         <div className="card_items">
           {filteredCards.map((item) => (
-            // console.log(item),
             <ItemCard
               key={`Item Card${item._id}`}
               item={item}

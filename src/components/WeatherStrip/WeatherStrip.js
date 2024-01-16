@@ -8,10 +8,14 @@ const WeatherStrip = ({
   currentTemperatureUnit = "",
 }) => {
   const weatherOption = weatherOptions.find(
-    (option) => option.day === day && option.type === type
+    (option) => option.day === day && option.type === type,
+    console.log(type)
   );
 
-  const weatherOptionUrl = weatherOption.url || "";
+  console.log(weatherOption);
+
+  const weatherOptionUrl =
+    weatherOption?.url || require("../../images/day/default.svg").default;
 
   return (
     <section className="weather" id="weather">
