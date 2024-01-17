@@ -6,7 +6,6 @@ const AddItemModal = ({ isOpen, onAddItem, handleCloseModal }) => {
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
-  console.log(setName);
 
   const [imageUrl, setURL] = useState("");
   const handleURLChange = (e) => {
